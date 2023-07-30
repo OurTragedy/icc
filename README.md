@@ -1,44 +1,43 @@
-# Docker Getting Started Tutorial
+Background of the Enterprise:
+	The business of choice is a small retail store specialized in homemade artisanal body care products, their premise is a personal approach with orders being placed in the website and then the products being manufactured in-premise and delivered appropriately. With that the business has seen a steady growth in costumer base and product offering requiring not only a physical expansion but also an optimisation in the IT infrastructure to accommodate the demand and increase reliability and scalability.
+Current IT Setup:
+	The current IT setup includes a small on premises server that hosts the website where the orders are handled, the local inventory with database management software and an email server for communication with suppliers and customer service.
+Recommendations:
+a. E-commerce Website Hosting:
 
-This tutorial was written with the intent of helping folks get up and running
-with containers and is designed to work with Docker Desktop. While not going too much 
-into depth, it covers the following topics:
+Non-Cloud Solution: Continue with on-premises hosting.
+Cloud Solution: Migrate the e-commerce website to a cloud hosting provider.
+b. Inventory Management Database:
 
-- Running your first container
-- Building containers
-- Learning what containers are
-- Running and removing containers
-- Using volumes to persist data
-- Using bind mounts to support development
-- Using container networking to support multi-container applications
-- Using Docker Compose to simplify the definition and sharing of applications
-- Using image layer caching to speed up builds and reduce push/pull size
-- Using multi-stage builds to separate build-time and runtime dependencies
+Non-Cloud Solution: Continue with the local database.
+Cloud Solution: Migrate the database to a cloud-based database service.
+c. Email Server:
 
-## Getting Started
+Non-Cloud Solution: Continue with the in-house email server.
+Cloud Solution: Migrate the email services to a cloud-based email service.
+d. File Storage and Backups:
 
-If you wish to run the tutorial, you can use the following command after installing Docker Desktop:
+Non-Cloud Solution: Continue with traditional local file storage.
+Cloud Solution: Adopt a cloud-based file storage and backup service.
+e. Remote Access:
 
-```bash
-docker run -d -p 80:80 docker/getting-started
-```
+Non-Cloud Solution: Continue with VPN for remote access.
+Cloud Solution: Implement a secure cloud-based remote access solution.
+Recommendations with Service Level and Deployment Type:
+a. E-commerce Website Hosting:
 
-Once it has started, you can open your browser to [http://localhost](http://localhost).
+Cloud Recommendation: Utilize a Managed Cloud Hosting Service with auto-scaling capabilities to handle traffic spikes during peak seasons.
+b. Inventory Management Database:
 
-## Development
+Cloud Recommendation: Opt for a Database-as-a-Service (DBaaS) solution to ensure scalability and automated backups.
+c. Email Server:
 
-This project has a `docker-compose.yml` file, which will start the mkdocs application on your
-local machine and help you see changes instantly.
+Cloud Recommendation: Choose a reputable Software-as-a-Service (SaaS) email provider to offload server management and ensure reliable email delivery.
+d. File Storage and Backups:
 
-```bash
-docker compose up
-```
+Cloud Recommendation: Implement a Cloud Storage Service with automatic backups and versioning for data redundancy.
+e. Remote Access:
 
-## Contributing
-
-If you find typos or other issues with the tutorial, feel free to create a PR and suggest fixes!
-
-If you have ideas on how to make the tutorial better or want to suggest adding new content, please open an 
-issue first before working on your idea. While we love input, we want to keep the tutorial scoped to new-comers.
-As such, we may reject ideas for more advanced requests and don't want you to lose any work you might
-have done. So, ask first and we'll gladly hear your thoughts!
+Cloud Recommendation: Deploy a Virtual Private Cloud (VPC) with VPN access for secure remote connections.
+Justifications:
+Cloud solution provides better scalability, performance, allows the server to handle traffic spikes accordingly, high availability, data safety and redundancy ensuring flexibility not only with the website but with the data. Continuing with in-premises server would require constant upkeeping, ready on call IT service and hardware upgrades to accommodate traffic spikes which would use a lot of resources and time which could be used in others areas to expand the business.
